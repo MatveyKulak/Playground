@@ -1,4 +1,4 @@
-﻿using Lesson3;
+﻿using Homework1;
 
 public class Program
 {
@@ -14,11 +14,15 @@ public class Program
         //GetAvgValue();
         //GetCurrentAge();
         //MethodName();
-        Pract pract = new Pract();
-        Console.WriteLine(pract.TaskName);
-        pract.Task1();
-        pract.Task2();
-        pract.Task3();
+        //Pract pract = new Pract();
+        //Console.WriteLine(pract.TaskName);
+        //pract.Task1();
+        //pract.Task2();
+        //pract.Task3();
+        KNB task1 = new KNB();
+        task1.Run();
+        Check task2 = new Check();
+        task2.Run1();
 
     }
 

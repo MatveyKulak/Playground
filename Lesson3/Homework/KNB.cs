@@ -1,19 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Homework1;
-public class Task1
+﻿namespace Homework1;
+public class KNB
 {
-    public static void Main(string[] args)
-    {
-        //Task_first();
-        Task2 task = new Task2();
-        task.Main2();
-    }
-    private static void Task_first()
+    public void Run()
     {
         Console.WriteLine("Игра КНБ, выберите камень, ножницы или бумагу");
         Console.Write("Первый игрок, ваш выбор: ");
