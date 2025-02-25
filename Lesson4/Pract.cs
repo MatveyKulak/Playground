@@ -11,20 +11,27 @@
             Console.Write("Угадайте число от 1 до 100: ");
             Random rand = new Random();
             int secretNumber = rand.Next(1, 101);
-            var myNumber = int.Parse(Console.ReadLine());
+            int myNumber;
 
-            if (myNumber > secretNumber)
+            do
             {
-                Console.WriteLine("Меньше");
-            }
-            else if (myNumber < secretNumber)
-            {
-                Console.WriteLine("Больше");
-            }
-            else
-            {
-                Console.WriteLine("Поздравляю, вы угадали!");
-            }
+                Console.Write("Угадайте число от 1 до 100: ");
+                myNumber = int.Parse(Console.ReadLine());
+                if (myNumber > secretNumber)
+                {
+                    Console.WriteLine("Меньше");
+                }
+                else if (myNumber < secretNumber)
+                {
+                    Console.WriteLine("Больше");
+                }
+                else
+                {
+                    Console.WriteLine("Поздравляю, вы угадали!");
+                }
+            } while (myNumber != secretNumber);
+
+
         }
         //Дан цикл:
         //Сколько раз выполнится строка j = j - 1?
@@ -112,7 +119,6 @@
                     Console.WriteLine("Нажата другая клавиша.");
                     break;
             }
-
         }
     }
 }
