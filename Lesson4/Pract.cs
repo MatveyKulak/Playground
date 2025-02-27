@@ -8,7 +8,6 @@
     {
         public void Random()
         {
-            Console.Write("Угадайте число от 1 до 100: ");
             Random rand = new Random();
             int secretNumber = rand.Next(1, 101);
             int myNumber;
@@ -30,8 +29,6 @@
                     Console.WriteLine("Поздравляю, вы угадали!");
                 }
             } while (myNumber != secretNumber);
-
-
         }
         //Дан цикл:
         //Сколько раз выполнится строка j = j - 1?
