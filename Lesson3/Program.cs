@@ -1,18 +1,18 @@
-﻿using Homework1;
+﻿namespace Lesson3;
+using Homework1;
 public class Program
 {
     static void Main(string[] args)
     {
-        //Greet();
-        //GetMaxWeight();
-        //GetAvgValue();
-        //GetCurrentAge();
-        //MethodName();
-        //Pract pract = new Pract();
-        //Console.WriteLine(pract.TaskName);
-        //pract.Task1();
-        //pract.Task2();
-        //pract.Task3();
+        Greet();
+        GetMaxWeight();
+        GetAvgValue();
+        GetCurrentAge();
+        MethodName();
+        Pract pract = new Pract();
+        pract.Task1();
+        pract.Task2();
+        pract.Task3();
         KNB task1 = new KNB();
         task1.Run();
         Check task2 = new Check();
