@@ -1,5 +1,4 @@
-﻿namespace Homework1;
-public class KNB
+﻿public class KNB
 {
     public void Run()
     {

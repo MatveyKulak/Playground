@@ -1,6 +1,4 @@
-﻿namespace Homework1;
-
-public class Check
+﻿public class Check
 {
     public void Run1()
     {

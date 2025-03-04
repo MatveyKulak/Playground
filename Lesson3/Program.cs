@@ -1,5 +1,4 @@
 ﻿namespace Lesson3;
-using Homework1;
 public class Program
 {
     static void Main(string[] args)
