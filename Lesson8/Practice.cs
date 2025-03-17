@@ -1,4 +1,6 @@
-﻿namespace Lesson8
+﻿using System.Text.RegularExpressions;
+
+namespace Lesson8
 {
     public class Practice
     {
@@ -71,5 +73,43 @@
                 Console.WriteLine($"Строки длинной {kvp.Key}: {string.Join(" ", kvp.Value)}");
             }
         }
+
+        public static void Password()
+        {
+            Console.Write("Введите пароль\t");
+            string password = Console.ReadLine();
+            if (password.Length < 8 || password.Length > 20)
+            {
+                Console.Write("\nНекоректная длинна пароля");
+            }
+
+            if (password.Contains(' '))
+            {
+                Console.Write("\nПароль не должен содержать пробелов");
+            }
+
+            if (!Regex.IsMatch(password, @"[A-Z]"))
+            {
+                Console.Write("\nПароль долджен содеражать заглавныфе буквы");
+            }
+
+            if (!Regex.IsMatch(password, @"[a-z]"))
+            {
+                Console.Write("\nПароль долджен содеражать строчные буквы");
+            }
+
+            if (!Regex.IsMatch(password, @"\d"))
+            {
+                Console.Write("\nПароль долджен содеражать хотя бы одну цифру");
+            }
+
+            if (!Regex.IsMatch(password, @"\W"))
+            {
+                Console.Write("\nПароль долджен содеражать хотя бы один специальный символ");
+            }
+
+        }
+
+
     }
 }

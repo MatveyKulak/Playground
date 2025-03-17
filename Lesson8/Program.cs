@@ -13,6 +13,7 @@
                 Console.WriteLine("1. Подсчёт количества слов");
                 Console.WriteLine("2. Нахождение первого уникального числа");
                 Console.WriteLine("3. Группировка строк по длине.");
+                Console.WriteLine("4. Cоответсвие пароля.");
                 Console.Write("Введите номер: ");
 
                 string input = Console.ReadLine();
@@ -29,7 +30,7 @@
                         Practice.GroupString();
                         break;
                     case "4":
-                        
+                        Practice.Password();
                         break;
                     case "5":
                         exit = true;

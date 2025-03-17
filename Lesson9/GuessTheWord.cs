@@ -44,43 +44,61 @@
                     Console.WriteLine($"Подсказка: {hint}");
                 }
 
-                Console.Write("Введите букву: ");
+                Console.Write("Введите букву или слово целиком: ");
                 string input = Console.ReadLine();
 
-                if (input.Length != 1 || !char.IsLetter(input[0]) || string.IsNullOrEmpty(input))
+                if (string.IsNullOrEmpty(input))
                 {
-                    Console.Write("Введите одну букву!!!!!!!!!: ");
+                    Console.Write("Введите букву хотя бы!!!!!!!!!: ");
                     continue;
                 }
 
-                char letter = input[0];
-                bool isFound = false;
-
-                if (Check.Contains(letter))
+                if (input.Length == 1)
                 {
-                    Console.WriteLine($"Буква '{letter}' уже была введена. Попробуйте другую букву.");
-                    continue;
-                }
+                    char letter = input[0];
+                    bool isFound = false;
 
-                Check.Add(letter);
-
-                for (int i = 0; i < word.Length; i++)
-                {
-                    if (letter == word[i])
+                    if (Check.Contains(letter))
                     {
-                        shifr[i] = letter;
-                        isFound = true;
+                        Console.WriteLine($"Буква '{letter}' уже была введена. Попробуйте другую букву.");
+                        continue;
+                    }
+
+                    Check.Add(letter);
+
+                    for (int i = 0; i < word.Length; i++)
+                    {
+                        if (letter == word[i])
+                        {
+                            shifr[i] = letter;
+                            isFound = true;
+                        }
+                    }
+
+                    if (isFound)
+                    {
+                        Console.WriteLine("Есть такая буква!");
+                        attempts--;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Нет такой буквы!");
+                        attempts--;
                     }
                 }
 
-                if (isFound)
+                else if (input.Length > 1)
                 {
-                    Console.WriteLine("Есть такая буква!");
-                }
-                else
-                {
-                    Console.WriteLine("Нет такой буквы!");
-                    attempts--;
+                    if (input == word)
+                    {
+                        isOtgadan = true;
+                        shifr = word.ToCharArray();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Неверное слово!");
+                        attempts--;
+                    }
                 }
 
                 if (new string(shifr) == word)
@@ -88,7 +106,7 @@
                     isOtgadan = true;
                     Console.WriteLine($"Поздравляем! Вы угадали слово: {word}");
                 }
-        }
+            }
 
         if (!isOtgadan)
         {

@@ -10,6 +10,7 @@
             {
                 Console.Clear();
                 Console.WriteLine("Выберите тему для отображения информации:");
+                Console.WriteLine("1.Игра 'Угадай термин C#'");
                 Console.Write("Введите номер: ");
 
                 string input = Console.ReadLine();
