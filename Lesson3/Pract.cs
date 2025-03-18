@@ -7,7 +7,7 @@
     //использовать тернарную операцию!)
     public class Pract
     {
-        public void Task1()
+        public void RightNum()
         {
             Console.WriteLine("Введите число: ");
             var number = int.Parse(Console.ReadLine());
@@ -21,7 +21,7 @@
                 Console.WriteLine("Неизвестное число");
             }
         }
-        public void Task2()
+        public void ChetNechet()
         {
             Console.WriteLine("Введите число: ");
             var number = int.Parse(Console.ReadLine());
@@ -31,8 +31,6 @@
 
         public void Task3()
         {
-
-
         }
     }
 }

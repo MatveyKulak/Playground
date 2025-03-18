@@ -1,8 +1,8 @@
 ﻿namespace Lesson7
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             while (true)
             {
@@ -16,33 +16,29 @@
                 Console.WriteLine("0. Выход");
 
                 string choice = Console.ReadLine();
+                string input = string.Empty;
 
                 switch (choice)
                 {
                     case "1":
                         Console.WriteLine("Введите текст:");
-                        string input1 = Console.ReadLine();
-                        Practice.ReverseWords(input1);
+                        Practice.ReverseWords(input);
                         break;
                     case "2":
                         Console.WriteLine("Введите текст:");
-                        string input2 = Console.ReadLine();
-                        Practice.RemoveNonAlphanumeric(input2);
+                        Practice.RemoveNonAlphanumeric(input);
                         break;
                     case "3":
                         Console.WriteLine("Введите текст:");
-                        string input3 = Console.ReadLine();
-                        Practice.CountWords(input3);
+                        Practice.CountWords(input);
                         break;
                     case "4":
                         Console.WriteLine("Введите текст:");
-                        string input4 = Console.ReadLine();
-                        Practice.FindLongestWord(input4);
+                        Practice.FindLongestWord(input);
                         break;
                     case "5":
                         Console.WriteLine("Введите текст:");
-                        string input5 = Console.ReadLine();
-                        Practice.CountCharacters(input5);
+                        Practice.CountCharacters(input);
                         break;
                     case "6":
                         Practice.FormatProblems();

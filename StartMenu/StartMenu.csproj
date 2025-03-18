@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lesson10\Lesson10.csproj" />
+    <ProjectReference Include="..\Lesson11\Lesson11.csproj" />
+    <ProjectReference Include="..\Lesson1\Lesson1.csproj" />
+    <ProjectReference Include="..\Lesson2\Lesson2.csproj" />
+    <ProjectReference Include="..\Lesson3\Lesson3.csproj" />
+    <ProjectReference Include="..\Lesson4\Lesson4.csproj" />
+    <ProjectReference Include="..\Lesson5\Lesson5.csproj" />
+    <ProjectReference Include="..\Lesson6\Lesson6.csproj" />
+    <ProjectReference Include="..\Lesson7\Lesson7.csproj" />
+    <ProjectReference Include="..\Lesson8\Lesson8.csproj" />
+    <ProjectReference Include="..\Lesson9\Lesson9.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,25 +1,28 @@
-﻿public class Program
+﻿namespace Lesson1
 {
-    private static void Main(string[] args)
+    public class Program
     {
-        int a = 1;
-        int b = 2;
-        int c = 3;
-        string message;
+        public static void Main()
+        {
+            int a = 1;
+            int b = 2;
+            int c = 3;
+            string message;
 
-        if (a > b)
-        {
-            message = "a > b";
-        }
-        else if (a < b)
-        {
-            message = "a < b";
-        }
-        else
-        {
-            message = "a = b";
-        }
+            if (a > b)
+            {
+                message = "a > b";
+            }
+            else if (a < b)
+            {
+                message = "a < b";
+            }
+            else
+            {
+                message = "a = b";
+            }
 
-        Console.WriteLine(message);
+            Console.WriteLine(message);
+        }
     }
 }
