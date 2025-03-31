@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-namespace Lesson10
+﻿namespace Lesson10
 {
     public static class Practice
     {

@@ -56,7 +56,7 @@
                     case "10":
                         Practice.EvenGroup();
                         break;
-                    case "11":
+                    case "13":
                         exit = true;
                         Console.WriteLine("Выход из программы...");
                         break;
