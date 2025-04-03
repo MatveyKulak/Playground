@@ -70,7 +70,13 @@
 
         public void CalculateExperience(int startYear)
         {
-            YearsOfExperience = 2025 - startYear;
+            if (startYear < 0 || startYear > DateTime.Now.Year)
+            {
+                Console.WriteLine("Некорректный год начала работы.");
+                return;
+            }
+
+            YearsOfExperience = DateTime.Now.Year - startYear;
         }
 
         public void ChangeTextColor(ConsoleColor color)
@@ -80,6 +86,12 @@
 
         public void AddSkill(string skill)
         {
+            if (string.IsNullOrWhiteSpace(skill))
+            {
+                Console.WriteLine("Навык не может быть пустым.");
+                return;
+            }
+
             if (!Skills.Contains(skill))
             {
                 Skills.Add(skill);
@@ -88,6 +100,12 @@
 
         public void AddWorkExperience(string job)
         {
+            if (string.IsNullOrWhiteSpace(job))
+            {
+                Console.WriteLine("Работа не может быть пустой.");
+                return;
+            }
+
             if (!WorkExperience.Contains(job))
             {
                 WorkExperience.Add(job);
@@ -116,6 +134,12 @@
 
         public void UpdateContactInfo(string newContactInfo)
         {
+            if (string.IsNullOrWhiteSpace(newContactInfo))
+            {
+                Console.WriteLine("Контактная информация не может быть пустой.");
+                return;
+            }
+
             ContactInfo = newContactInfo;
         }
     }
