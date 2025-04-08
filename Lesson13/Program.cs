@@ -15,6 +15,9 @@ namespace Lesson13
                 Console.WriteLine("Выберите тему для отображения информации:");
                 Console.WriteLine("1. Создать обычный класс");
                 Console.WriteLine("2. Создать супергероев");
+                Console.WriteLine("3. Продажи");
+                Console.WriteLine("4. Проверка");
+                Console.WriteLine("5. Библиотека");
                 Console.Write("Введите номер: ");
 
                 string input = Console.ReadLine();
@@ -62,6 +65,21 @@ namespace Lesson13
                         test.InfoTest();
                         test.FailedTest();
                         test.InfoTest();
+                        break;
+                    case "5":
+                        Author author1 = new Author("J.K. Rowling", 1965);
+                        Author author2 = new Author("J.R.R. Tolkien", 1892);
+
+                        Book book1 = new Book("Harry Potter and the Sorcerer's Stone", author1, 20.99);
+                        Book book2 = new Book("The Hobbit", author2, 15.99);
+
+                        Library library = new Library();
+                        library.AddBook(book1);
+                        library.AddBook(book2);
+
+                        library.DisplayLibraryInfo();
+
+                        Console.WriteLine($"Total price: {library.GetTotalPrice():F2}");
                         break;
                     case "10":
                         exit = true;
