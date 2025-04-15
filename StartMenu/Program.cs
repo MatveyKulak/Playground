@@ -19,6 +19,8 @@
             Console.WriteLine("12.Lesson12");
             Console.WriteLine("13.Lesson13");
             Console.WriteLine("14.Lesson14");
+            Console.WriteLine("15.Lesson15");
+            Console.WriteLine("16.Lesson16");
 
             string input = Console.ReadLine();
 
@@ -65,6 +67,9 @@
                     break;
                 case "14":
                     Lesson14.Program.Main();
+                    break;
+                case "15":
+                    Lesson15.Program.Main();
                     break;
                 default:
                     break;

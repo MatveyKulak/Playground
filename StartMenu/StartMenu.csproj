@@ -13,6 +13,8 @@
     <ProjectReference Include="..\Lesson12\Lesson12.csproj" />
     <ProjectReference Include="..\Lesson13\Lesson13.csproj" />
     <ProjectReference Include="..\Lesson14\Lesson14.csproj" />
+    <ProjectReference Include="..\Lesson15\Lesson15.csproj" />
+    <ProjectReference Include="..\Lesson16\Lesson16.csproj" />
     <ProjectReference Include="..\Lesson1\Lesson1.csproj" />
     <ProjectReference Include="..\Lesson2\Lesson2.csproj" />
     <ProjectReference Include="..\Lesson3\Lesson3.csproj" />

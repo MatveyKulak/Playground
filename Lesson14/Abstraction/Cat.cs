@@ -1,4 +1,4 @@
-﻿namespace Lesson14
+﻿namespace Lesson14.Abstraction
 {
     class Cat : Animal
     {
