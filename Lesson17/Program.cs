@@ -10,6 +10,9 @@
             {
                 Console.Clear();
                 Console.WriteLine("Выберите тему для отображения информации:");
+                Console.WriteLine("1.Вторая задача ");
+                Console.WriteLine("2.Реверс строки ");
+                Console.WriteLine("3.Формат даты ");
                 Console.Write("Введите номер: ");
 
                 string input = Console.ReadLine();
@@ -22,6 +25,10 @@
                     case "2":
                         MyString chars = new MyString('c', 'a');
                         chars.ReverseMas();
+                        break;
+                    case "3":
+                        DateTime today = DateTime.Now;
+                        Console.WriteLine(today.DayMonthYear());
                         break;
                     case "10":
                         exit = true;
