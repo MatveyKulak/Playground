@@ -13,6 +13,8 @@
                 Console.WriteLine("1.Вторая задача ");
                 Console.WriteLine("2.Реверс строки ");
                 Console.WriteLine("3.Формат даты ");
+                Console.WriteLine("4.Студенты(вывода нет) ");
+                Console.WriteLine("5.ООП ");
                 Console.Write("Введите номер: ");
 
                 string input = Console.ReadLine();
@@ -34,7 +36,8 @@
                         
                         break;
                     case "5":
-
+                        OOP myOOP = new OOP("Обычное число", 100);
+                        myOOP.Print();
                         break;
                     case "10":
                         exit = true;
