@@ -33,7 +33,13 @@
                         Console.WriteLine(today.DayMonthYear());
                         break;
                     case "4":
-                        
+                        Students studs = new Students();
+
+                        studs.OrderByLow();
+                        studs.MoreThan70();
+                        studs.OnlyNames();
+                        studs.MiddlePoints();
+                        studs.Counting();
                         break;
                     case "5":
                         OOP myOOP = new OOP("Обычное число", 100);

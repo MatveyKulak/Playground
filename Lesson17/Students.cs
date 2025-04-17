@@ -2,27 +2,18 @@
 {
     public class Students
     {
-        private List<Students> students = new List<Students>
+        private List<StudentsManager> students = new List<StudentsManager>
         {
-            new Students("Виктория", 17, 60),
-            new Students("Артём", 18, 92),
-            new Students("Роман", 19, 34)
+            new StudentsManager("Виктория", 17, 60),
+            new StudentsManager("Артём", 18, 92),
+            new StudentsManager("Роман", 19, 34)
         };
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public double Points { get; set; }
 
-        public Students(string name, int age, int points)
-        {
-            Name = name;
-            Age = age;
-            Points = points;
-        }
         public void OrderByLow()
         {
             var low = students.OrderByDescending(p => p.Points);
         }
-        public void MoreThen70()
+        public void MoreThan70()
         {
             var seventh = students.Where(p => p.Points > 70);
         }
