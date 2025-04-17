@@ -20,6 +20,8 @@
                         Test.SecondTaskMas();
                         break;
                     case "2":
+                        MyString chars = new MyString('c', 'a');
+                        chars.ReverseMas();
                         break;
                     case "10":
                         exit = true;
