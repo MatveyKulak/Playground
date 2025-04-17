@@ -1,4 +1,4 @@
-﻿namespace Lesson16
+﻿namespace Lesson17
 {
     public class Program
     {
@@ -10,7 +10,6 @@
             {
                 Console.Clear();
                 Console.WriteLine("Выберите тему для отображения информации:");
-                Console.WriteLine("1. Действия с массивом:");
                 Console.Write("Введите номер: ");
 
                 string input = Console.ReadLine();
@@ -18,7 +17,7 @@
                 switch (input)
                 {
                     case "1":
-                        Practice.TransformTwoDimensionalArray();
+                        Test.SecondTaskMas();
                         break;
                     case "2":
                         break;

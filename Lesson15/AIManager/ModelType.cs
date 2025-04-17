@@ -3,7 +3,7 @@
     public enum ModelType
     {
         NeuralNetwork,
-        DecisionTreem,
+        DecisionTree,
         SVM,
         KNN
     }   

@@ -17,6 +17,8 @@ namespace Lesson14
                 Console.WriteLine("Выберите тему для отображения информации:");
                 Console.Write("Введите номер: ");
                 Console.WriteLine("1. Кот и собака:");
+                Console.WriteLine("2. Компания:");
+                Console.WriteLine("3. Магазин:");
 
                 string input = Console.ReadLine();
 
