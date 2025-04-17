@@ -30,6 +30,12 @@
                         DateTime today = DateTime.Now;
                         Console.WriteLine(today.DayMonthYear());
                         break;
+                    case "4":
+                        
+                        break;
+                    case "5":
+
+                        break;
                     case "10":
                         exit = true;
                         Console.WriteLine("Выход из программы...");
