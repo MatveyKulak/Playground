@@ -16,6 +16,7 @@
     <ProjectReference Include="..\Lesson15\Lesson15.csproj" />
     <ProjectReference Include="..\Lesson16\Lesson16.csproj" />
     <ProjectReference Include="..\Lesson17\Lesson17.csproj" />
+    <ProjectReference Include="..\Lesson18\Lesson18.csproj" />
     <ProjectReference Include="..\Lesson1\Lesson1.csproj" />
     <ProjectReference Include="..\Lesson2\Lesson2.csproj" />
     <ProjectReference Include="..\Lesson3\Lesson3.csproj" />

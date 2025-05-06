@@ -21,6 +21,33 @@
                         Practice.TransformTwoDimensionalArray();
                         break;
                     case "2":
+                        PaymentMethod cardPayment = new CardPayment();
+                        cardPayment.Describe();
+                        cardPayment.IsAvailable(5000);
+                        cardPayment.ProcessPayment(5000);
+
+                        var payments = new List<(PaymentMethod method, decimal amount)>
+                        {
+                            (new CardPayment(), 5000),
+                            (new InvoicePayment(), 800),
+                            (new InvoicePayment(), 3000),
+                            (new MobilePayment(), 2000),
+                            (new MobilePayment(), 500),
+                        };
+
+                        foreach (var (method, amount) in payments)
+                        {
+                            method.Describe();
+
+                            if (method.IsAvailable(amount))
+                            {
+                                method.ProcessPayment(amount);
+                            }
+                            else
+                            {
+                                Console.WriteLine($"Метод {method.Name} недоступен для суммы {amount}");
+                            }
+                        }
                         break;
                     case "10":
                         exit = true;

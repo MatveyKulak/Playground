@@ -1,8 +1,8 @@
 ﻿namespace Lesson16
 {
-    public static class DataTimeExtensions
+    public static class DateTimeExtensions
     {
-        public static AddBusinessDays(this DateTime startDate, int businessDays, List<DateTime> holidays)
+        public static DateTime AddBusinessDays(this DateTime startDate, int businessDays, List<DateTime> holidays)
         {
             DateTime currentDate = startDate;
             int addedDays = 0;
@@ -16,6 +16,8 @@
                     addedDays++;
                 }
             }
+
+            return currentDate;
         }
 
         private static bool IsBusinessDay(DateTime date, List<DateTime> holidays)

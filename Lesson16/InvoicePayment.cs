@@ -4,14 +4,20 @@
     {
         public override string Name => "По счёту";
 
-        public override bool CalculateTotal(decimal amount)
+        public override decimal CalculateTotal(decimal amount)
         {
-            throw new NotImplementedException();
+            return amount * 1.035m;
         }
 
         public override bool IsAvailable(decimal amount)
         {
-            throw new NotImplementedException();
+            return amount > 1000;
+        }
+
+        public override void ProcessPayment(decimal amount)
+        {
+            decimal total = CalculateTotal(amount);
+            Console.WriteLine($"Счёт на сумму {total} выставлен.");
         }
     }
 }
