@@ -1,6 +1,4 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-
-namespace Lesson13
+﻿namespace Lesson13
 {
     class PlainClass
     {
