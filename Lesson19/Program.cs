@@ -1,4 +1,4 @@
-﻿namespace Lesson9
+﻿namespace Lesson19
 {
     public class Program
     {
@@ -10,7 +10,6 @@
             {
                 Console.Clear();
                 Console.WriteLine("Выберите тему для отображения информации:");
-                Console.WriteLine("1.Игра 'Угадай термин C#'");
                 Console.Write("Введите номер: ");
 
                 string input = Console.ReadLine();
@@ -18,7 +17,7 @@
                 switch (input)
                 {
                     case "1":
-                        GuessTheWord.Play();
+
                         break;
                     case "5":
                         exit = true;
