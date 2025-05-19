@@ -3,12 +3,12 @@
     public class AlarmSystem
     {
         public delegate void AlarmHandler (string location);
-        public event AlarmHandler? OnAlarm;
+        public event AlarmHandler? OnAlarmEvent;
 
         public void Trigger (string location)
         {
             Console.WriteLine($"Тревога в {location}!");
-            OnAlarm?.Invoke(location);
+            OnAlarmEvent?.Invoke(location);
         }
     }
 }

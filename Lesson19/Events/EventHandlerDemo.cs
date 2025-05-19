@@ -10,7 +10,7 @@ namespace Lesson_19.Events
         {
             var runner = new TaskRunner();
 
-            runner.TaskCompleted += () =>
+            runner.TaskCompletedEvent += () =>
             {
                 Console.WriteLine("Получено уведомление: задача завершена.");
             };
@@ -23,13 +23,13 @@ namespace Lesson_19.Events
             var store = new Store();
 
             // Подписчик 1: логирование
-            store.OnPurchase += (product, price) =>
+            store.OnPurchaseEvent += (product, price) =>
             {
                 Console.WriteLine($"[ЛОГ]: Куплен {product} за {price}");
             };
 
             // Подписчик 2: начисление бонусов
-            store.OnPurchase += (product, price) =>
+            store.OnPurchaseEvent += (product, price) =>
             {
                 var bonus = price * 0.05m;
                 Console.WriteLine($"[БОНУСЫ]: Начислено {bonus} бонусов");
@@ -45,8 +45,8 @@ namespace Lesson_19.Events
             var police = new Police();
             var logger = new Logger();
 
-            alarm.OnAlarm += police.Respond;
-            alarm.OnAlarm += logger.Log;
+            alarm.OnAlarmEvent += police.Respond;
+            alarm.OnAlarmEvent += logger.Log;
 
             alarm.Trigger("Офис компании X");
         }
@@ -55,9 +55,10 @@ namespace Lesson_19.Events
         {
             var button = new Button();
 
-            button.Clicked += (sender, args) =>
+            button.OnClickEvent += (sender, args) =>
             {
-                Console.WriteLine($"Обработчик события: Кнопка была нажата {sender}");
+                var btn = (Button)sender;
+                Console.WriteLine($"Обработчик события: Кнопка была нажата {btn.Name}");
             };
 
             button.Click();
@@ -67,7 +68,7 @@ namespace Lesson_19.Events
         {
             var product = new Product();
 
-            product.PriceChanged += (sender, args) =>
+            product.OnPriceChangedEvent += (sender, args) =>
             {
                 Console.WriteLine($"[LOG]: Старая цена: {args.OldPrice}, Новая цена: {args.NewPrice}");
             };
@@ -83,8 +84,8 @@ namespace Lesson_19.Events
             var notifier = new Notifier();
             var logger = new Logger();
 
-            downloader.DownloadCompleted += notifier.Notify;
-            downloader.DownloadCompleted += logger.Log;
+            downloader.OnDownloadCompletedEvent += notifier.Notify;
+            downloader.OnDownloadCompletedEvent += logger.Log;
 
             downloader.Download("report.pdf");
         }

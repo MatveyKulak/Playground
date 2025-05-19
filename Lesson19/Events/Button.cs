@@ -2,12 +2,14 @@
 {
     class Button
     {
-        public event EventHandler? Clicked;
+        public object Name { get; set; }
+
+        public event EventHandler? OnClickEvent;
 
         public void Click ()
         {
             Console.WriteLine("Кнопка нажата");
-            Clicked?.Invoke(this, EventArgs.Empty);
+            OnClickEvent?.Invoke(this, EventArgs.Empty);
         }
     }
 }

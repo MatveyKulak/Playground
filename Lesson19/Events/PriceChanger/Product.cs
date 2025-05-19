@@ -2,7 +2,7 @@
 {
     public class Product
     {
-        public event EventHandler<PriceChangedEventArgs>? PriceChanged;
+        public event EventHandler<PriceChangedEventArgs>? OnPriceChangedEvent;
 
         private decimal _price;
 
@@ -15,7 +15,7 @@
 
                 Console.WriteLine($"Цена изменена: {oldPrice} → {newPrice}");
 
-                PriceChanged?.Invoke(this, new PriceChangedEventArgs(oldPrice, newPrice));
+                OnPriceChangedEvent?.Invoke(this, new PriceChangedEventArgs(oldPrice, newPrice));
             }
         }
     }

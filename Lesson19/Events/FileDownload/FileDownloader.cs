@@ -2,7 +2,7 @@
 {
     public class FileDownloader
     {
-        public event EventHandler<DownloadEventArgs>? DownloadCompleted;
+        public event EventHandler<DownloadEventArgs>? OnDownloadCompletedEvent;
 
         public void Download (string file)
         {
@@ -10,7 +10,7 @@
             Thread.Sleep(500);
             Console.WriteLine("Загрузка завершена.");
 
-            DownloadCompleted?.Invoke(this, new DownloadEventArgs(file));
+            OnDownloadCompletedEvent?.Invoke(this, new DownloadEventArgs(file));
         }
     }
 }

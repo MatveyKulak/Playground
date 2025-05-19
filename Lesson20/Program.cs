@@ -1,4 +1,4 @@
-﻿namespace Lesson19
+﻿namespace Lesson21
 {
     public class Program
     {
@@ -17,11 +17,9 @@
                 switch (input)
                 {
                     case "1":
-                        Lesson_19.Events.EventHandlerDemo.HandleTasks();
-                        Lesson_19.Events.EventHandlerDemo.HandleStorePurchases();
-                        Lesson_19.Events.EventHandlerDemo.HandleButtonClicks();
-                        Lesson_19.Events.EventHandlerDemo.HandleProductPriceChange();
-                        Lesson_19.Events.EventHandlerDemo.HandleFileDownload();
+                        FactorialCalculator.RunThreads();
+                        FactorialCalculator.RunThreadPool();
+                        FactorialCalculator.RunTasks();
                         break;
                     case "5":
                         exit = true;

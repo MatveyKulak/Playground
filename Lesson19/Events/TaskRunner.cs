@@ -3,7 +3,7 @@
     public class TaskRunner
     {
         public delegate void TaskCompletedHandler ();
-        public event TaskCompletedHandler? TaskCompleted;
+        public event TaskCompletedHandler? TaskCompletedEvent;
 
         public void Run ()
         {
@@ -14,7 +14,7 @@
             Console.WriteLine("Задача завершена!");
 
             // Вызов события
-            TaskCompleted?.Invoke();
+            TaskCompletedEvent?.Invoke();
         }
     }
 }
