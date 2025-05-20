@@ -13,7 +13,7 @@
                 Console.WriteLine("1.Изменение массива");
                 Console.WriteLine("2.Изменение строки ");
                 Console.WriteLine("3.LINQ ");
-                Console.WriteLine("4.Студенты(вывода нет) ");
+                Console.WriteLine("4.Вызов 10 методов");
                 Console.WriteLine("5.ООП ");
                 Console.Write("Введите номер: ");
 
@@ -30,6 +30,17 @@
                         break;
                     case "3":
                         Linq.BaseSortList();
+                        break;
+                    case "4":
+                        MyClass obj1 = new MyClass();
+                        MyClass obj2 = new MyClass();
+
+                        for (int i = 0; i < 5; i++)
+                        {
+                            obj1.MyMethod();
+                            obj2.MyMethod();
+                        }
+                        Console.WriteLine("Событие: метод был вызван 10 раз во всех экземплярах!");
                         break;
                     case "5":
                         exit = true;
