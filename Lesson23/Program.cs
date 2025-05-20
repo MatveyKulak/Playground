@@ -12,7 +12,7 @@
                 Console.WriteLine("Выберите тему для отображения информации:");
                 Console.WriteLine("1.Изменение массива");
                 Console.WriteLine("2.Изменение строки ");
-                Console.WriteLine("3.Формат даты ");
+                Console.WriteLine("3.LINQ ");
                 Console.WriteLine("4.Студенты(вывода нет) ");
                 Console.WriteLine("5.ООП ");
                 Console.Write("Введите номер: ");
@@ -27,6 +27,9 @@
                     case "2":
                         string str = "a1b2";
                         Console.WriteLine(str.RebuildString());
+                        break;
+                    case "3":
+                        Linq.BaseSortList();
                         break;
                     case "5":
                         exit = true;
