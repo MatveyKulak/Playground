@@ -11,7 +11,7 @@
                 Console.Clear();
                 Console.WriteLine("Выберите тему для отображения информации:");
                 Console.WriteLine("1.Изменение массива");
-                Console.WriteLine("2.Реверс строки ");
+                Console.WriteLine("2.Изменение строки ");
                 Console.WriteLine("3.Формат даты ");
                 Console.WriteLine("4.Студенты(вывода нет) ");
                 Console.WriteLine("5.ООП ");
@@ -23,6 +23,10 @@
                 {
                     case "1":
                         Arrays.CreateArray();
+                        break;
+                    case "2":
+                        string str = "a1b2";
+                        Console.WriteLine(str.RebuildString());
                         break;
                     case "5":
                         exit = true;
