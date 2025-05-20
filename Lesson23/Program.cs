@@ -15,6 +15,7 @@
                 Console.WriteLine("3.LINQ ");
                 Console.WriteLine("4.Вызов 10 методов");
                 Console.WriteLine("5.Математика ");
+                Console.WriteLine("6.ООП ");
                 Console.Write("Введите номер: ");
 
                 string input = Console.ReadLine();
@@ -76,6 +77,9 @@
                         {
                             Console.WriteLine($"Ошибка: {ex.Message}");
                         }
+                        break;
+                    case "6":
+                        
                         break;
                     case "10":
                         exit = true;
