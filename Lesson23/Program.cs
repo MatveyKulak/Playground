@@ -14,7 +14,7 @@
                 Console.WriteLine("2.Изменение строки ");
                 Console.WriteLine("3.LINQ ");
                 Console.WriteLine("4.Вызов 10 методов");
-                Console.WriteLine("5.ООП ");
+                Console.WriteLine("5.Математика ");
                 Console.Write("Введите номер: ");
 
                 string input = Console.ReadLine();
@@ -43,6 +43,41 @@
                         Console.WriteLine("Событие: метод был вызван 10 раз во всех экземплярах!");
                         break;
                     case "5":
+                        try
+                        {
+                            Console.WriteLine("Введите число для вычисления факториала:");
+                            int number = int.Parse(Console.ReadLine());
+                            int result = Math.Factorial(number);
+                            Console.WriteLine($"Факториал {number} = {result}");
+                        }
+                        catch (ArgumentOutOfRangeException ex)
+                        {
+                            Console.WriteLine($"Ошибка: {ex.Message}");
+                        }
+                        catch (ArgumentException ex)
+                        {
+                            Console.WriteLine($"Ошибка: {ex.Message}");
+                        }
+
+                        try
+                        {
+                            Console.WriteLine("Введите основание и степень для возведения в степень:");
+                            string[] nums = Console.ReadLine().Split();
+                            int value = int.Parse(nums[0]);
+                            int power = int.Parse(nums[1]);
+                            int result1 = Math.Power(value, power);
+                            Console.WriteLine($"{value} в степени {power} = {result1}");
+                        }
+                        catch (ArgumentOutOfRangeException ex)
+                        {
+                            Console.WriteLine($"Ошибка: {ex.Message}");
+                        }
+                        catch (ArgumentException ex)
+                        {
+                            Console.WriteLine($"Ошибка: {ex.Message}");
+                        }
+                        break;
+                    case "10":
                         exit = true;
                         Console.WriteLine("Выход из программы...");
                         break;
